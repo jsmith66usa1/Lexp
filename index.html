@@ -3,12 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Learning Experience - Tutoring & Education Company</title>
+    <title>The Learning Experience AI - Dashboard</title>
     
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9697332521689816"
-     crossorigin="anonymous"></script>
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
@@ -17,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -26,128 +23,161 @@
         }
 
         @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
-        }
-
-        #main-container {
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .frosted-glass {
             background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .action-card {
+            transition: all 0.2s ease-in-out;
+        }
+
+        .action-card:hover {
+            transform: translateY(-4px);
+            background-color: white;
         }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center py-10 px-4">
-    <div id="main-container" class="max-w-6xl w-full frosted-glass p-8 md:p-12 rounded-xl shadow-2xl border border-blue-200">
-        <!-- Header Section -->
-        <header class="text-center mb-10">
-            <div class="mb-4">
-                <img src="lexp - 1.jpeg" 
-                     alt="The Learning Experience logo with a lightbulb and a laptop." 
-                     class="mx-auto rounded-xl shadow-lg w-full max-w-xl" />
+<body class="min-h-screen p-4 md:p-8 flex flex-col items-center">
+
+    <!-- Simple Header -->
+    <header class="w-full max-w-6xl flex flex-col md:flex-row items-center justify-between mb-8 gap-6">
+        <div class="flex items-center gap-4">
+            <!-- Smiling Robot Icon -->
+            <div class="w-14 h-14 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden p-2">
+                <svg viewBox="0 0 64 64" class="w-full h-full">
+                    <!-- Antenna -->
+                    <circle cx="32" cy="8" r="3" fill="white" />
+                    <line x1="32" y1="11" x2="32" y2="16" stroke="white" stroke-width="3"/>
+                    <!-- Head -->
+                    <rect x="12" y="16" width="40" height="34" rx="8" fill="white" />
+                    <!-- Eyes -->
+                    <circle cx="22" cy="28" r="3" fill="#2563eb" />
+                    <circle cx="42" cy="28" r="3" fill="#2563eb" />
+                    <!-- Smiling Mouth -->
+                    <path d="M22 38 Q32 48 42 38" fill="none" stroke="#2563eb" stroke-width="3" stroke-linecap="round" />
+                </svg>
             </div>
-        </header>
-
-        <!-- Resources Section -->
-        <section class="mb-10">
-             <div class="flex flex-wrap justify-center gap-4 md:gap-6">
-                 <!-- Meetup Group Button -->
-                <a href="https://www.meetup.com/the-learning-experience/about/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-                    Join Meetup
-                </a>
-                <!-- Free Classes Button -->
-                <a href="free.html"
-                   class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-75">
-                    Free Classes
-                </a>
-                <!-- Algebra 1 Button -->
-                <a href="https://jsmith66usa1.github.io/Algebra1/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-75">
-                    Algebra 1 Outline
-                </a>
-                <!-- Algebra 2 Button -->
-                <a href="https://jsmith66usa1.github.io/Algebra2/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-sky-600 hover:bg-sky-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-75">
-                    Algebra 2 Outline
-                </a>
-                <!-- Calculus Button -->
-                <a href="https://jsmith66usa1.github.io/calculus/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-violet-600 hover:bg-violet-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-75">
-                    Calculus Outline
-                </a>
-                <!-- Zoom Button -->
-                <a href="https://jsmith66usa1.github.io/zoom/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-75">
-                    Zoom Help
-                </a>
-                <!-- Web AI Button -->
-                <a href="https://jsmith66usa1.github.io/web1/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-75">
-                    Web AI
-                </a>
-                <!-- Learning Games Button -->
-                <a href="https://jsmith66usa1.github.io/wlaunch/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-rose-600 hover:bg-rose-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-rose-500 focus:ring-opacity-75">
-                    Learning Games
-                </a>
-                <!-- Civil War History Button -->
-                <a href="abe.html"
-                   class="inline-block bg-slate-600 hover:bg-slate-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-opacity-75">
-                    Civil War History
-                </a>
-                <!-- The History of Math Button -->
-                <a href="https://jsmith66usa1.github.io/launchablert/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-amber-600 hover:bg-amber-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-opacity-75">
-                    The History of Math
-                </a>
-                <!-- View Services Button (Second to last) -->
-                <a href="https://jsmith66usa1.github.io/services/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-75">
-                    View Services
-                </a>
-                <!-- Request Services Button (Last) -->
-                <a href="https://jsmith66usa1.github.io/contact/" target="_blank" rel="noopener noreferrer"
-                   class="inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75">
-                    Request Services
-                </a>
+            <div>
+                <h1 class="text-2xl font-extrabold text-slate-800 tracking-tight">The Learning Experience AI</h1>
+                <p class="text-slate-600 text-sm font-medium">Empowering adults and children through Technology, History, English & Math.</p>
             </div>
-        </section>
+        </div>
+        <div class="flex gap-3">
+            <a href="mailto:jsmith66usa1@gmail.com" class="p-3 bg-white/50 hover:bg-white rounded-full text-slate-700 transition-colors shadow-sm border border-white/40">
+                <i class="far fa-envelope"></i>
+            </a>
+            <a href="https://jsmith66usa1.github.io/contact/" target="_blank" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold shadow-md transition-colors text-sm">
+                Request Services
+            </a>
+        </div>
+    </header>
 
-        <!-- Introduction Section -->
-        <section class="mb-10 text-center">
-            <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-full mx-auto">
-                Welcome to The Learning Experience! We help "adults, parents, and children" master <strong>Computer Technology, Algebra, Calculus, and History</strong>. You can "schedule classes through Request Services or Meetup" to enhance your skills. Our unique approach combines traditional group and individual tutoring with new <strong>AI tutoring companions</strong> available 24/7, providing a supportive, tech-enhanced environment to help you take your skills to the next level.
-            </p>
-        </section>
+    <!-- Main Dashboard Container -->
+    <main class="w-full max-w-6xl frosted-glass rounded-3xl p-6 md:p-10 shadow-2xl border border-white/40">
+        
+        <!-- Welcome Message -->
+        <div class="mb-10 text-center md:text-left">
+            <h2 class="text-3xl font-bold text-slate-800 mb-3 text-transparent bg-clip-text bg-gradient-to-r from-blue-700 to-indigo-600">Resources & Portals</h2>
+            <p class="text-slate-600 max-w-2xl">Welcome to your central learning hub. Access your curriculum, AI companions, and community workshops below.</p>
+        </div>
 
-        <!-- Contact Section -->
-        <section class="mt-10 text-center p-4 bg-gray-50 rounded-xl shadow-md border border-gray-200">
-            <h3 class="text-xl font-bold text-gray-700 mb-2">Contact Us</h3>
-            <p class="text-base text-gray-700">
-                Questions? Reach out at:
-                <a href="mailto:jsmith66usa1@gmail.com" class="text-indigo-600 hover:text-indigo-800 font-semibold underline">
-                    jsmith66usa1@gmail.com
-                </a>
-            </p>
-        </section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            
+            <!-- Category: Math Tracks -->
+            <div class="lg:col-span-4 mt-2 mb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                    <span class="w-8 h-[1px] bg-slate-300"></span> Mathematics
+                </h3>
+            </div>
+            
+            <a href="https://jsmith66usa1.github.io/Algebra1/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-green-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-plus"></i></div>
+                <span class="font-bold text-slate-700">Algebra 1</span>
+            </a>
+            
+            <a href="https://jsmith66usa1.github.io/Algebra2/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-sky-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-superscript"></i></div>
+                <span class="font-bold text-slate-700">Algebra 2</span>
+            </a>
+            
+            <a href="https://jsmith66usa1.github.io/calculus/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-violet-600 text-white flex items-center justify-center shrink-0"><i class="fas fa-infinity"></i></div>
+                <span class="font-bold text-slate-700">Calculus</span>
+            </a>
 
-        <!-- Footer Section -->
-        <footer class="text-center mt-10 text-gray-500 text-sm">
-            <p>&copy; 2024 Learning Experience Online. All rights reserved.</p>
-        </footer>
-    </div>
+            <a href="https://jsmith66usa1.github.io/launchablert/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-history"></i></div>
+                <span class="font-bold text-slate-700">Math History</span>
+            </a>
+
+            <!-- Category: Tech & AI -->
+            <div class="lg:col-span-4 mt-6 mb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                    <span class="w-8 h-[1px] bg-slate-300"></span> Technology
+                </h3>
+            </div>
+
+            <a href="https://jsmith66usa1.github.io/web1/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-teal-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-robot"></i></div>
+                <span class="font-bold text-slate-700">Web AI</span>
+            </a>
+
+            <a href="https://jsmith66usa1.github.io/wlaunch/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-rose-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-gamepad"></i></div>
+                <span class="font-bold text-slate-700">Learning Games</span>
+            </a>
+
+            <a href="https://lincoln-s-history-class-264533833704.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-slate-600 text-white flex items-center justify-center shrink-0"><i class="fas fa-monument"></i></div>
+                <span class="font-bold text-slate-700">Civil War History</span>
+            </a>
+
+            <a href="https://jsmith66usa1.github.io/zoom/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-red-600 text-white flex items-center justify-center shrink-0"><i class="fas fa-video"></i></div>
+                <span class="font-bold text-slate-700">Zoom Help</span>
+            </a>
+
+            <!-- Category: Community -->
+            <div class="lg:col-span-4 mt-6 mb-2">
+                <h3 class="text-xs font-bold text-slate-400 uppercase tracking-widest flex items-center gap-2">
+                    <span class="w-8 h-[1px] bg-slate-300"></span> Community & Services
+                </h3>
+            </div>
+
+            <a href="https://www.meetup.com/the-learning-experience/about/" target="_blank" class="action-card p-5 rounded-2xl bg-blue-600 text-white shadow-lg flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-white/20 text-white flex items-center justify-center shrink-0"><i class="fas fa-users"></i></div>
+                <span class="font-bold">Join Meetup</span>
+            </a>
+
+            <a href="free.html" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500 text-white flex items-center justify-center shrink-0"><i class="fas fa-star"></i></div>
+                <span class="font-bold text-slate-700">Free Classes</span>
+            </a>
+
+            <a href="https://jsmith66usa1.github.io/services/" target="_blank" class="action-card p-5 rounded-2xl bg-white/40 border border-white/60 shadow-sm flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-orange-600 text-white flex items-center justify-center shrink-0"><i class="fas fa-list-check"></i></div>
+                <span class="font-bold text-slate-700">View Services</span>
+            </a>
+
+            <a href="https://jsmith66usa1.github.io/contact/" target="_blank" class="action-card p-5 rounded-2xl bg-purple-600 text-white shadow-lg flex items-center gap-4">
+                <div class="w-10 h-10 rounded-lg bg-white/20 text-white flex items-center justify-center shrink-0"><i class="fas fa-calendar-check"></i></div>
+                <span class="font-bold">Request Help</span>
+            </a>
+
+        </div>
+    </main>
+
+    <!-- Simple Footer -->
+    <footer class="mt-8 text-center text-slate-600 text-sm">
+        <p>&copy; 2024 The Learning Experience AI. Contact us: <a href="mailto:jsmith66usa1@gmail.com" class="font-bold hover:text-blue-700 underline decoration-blue-300">jsmith66usa1@gmail.com</a></p>
+    </footer>
+
 </body>
 </html>
